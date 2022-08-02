@@ -1,6 +1,6 @@
 # RT1Assignment3
 
-## INTRODUTION
+# INTRODUTION
 ----------------------------
 In this assignment we were asked to program and develop the structure of the robot on ROS enviroment in such a way that it must follow the following behaviours.
 * Autonomously reach a x,y coordinate inserted by the user
@@ -20,7 +20,7 @@ $ roslaunch final_assignment simulation.launch
 
 The above simulation.launch file holds the launch parameters of both simulation_gmapping and move_base packages and robot simulation. 
 
-### simulation_gmapping
+## simulation_gmapping
 The simulation_gmapping package allows:
 ```
 Add the description of the robot to the ROS parameter server
@@ -28,26 +28,22 @@ Launch the simulation in Gazebo
 Launch the Rviz node, along with some additional nodes
 Generate the robot in the simulation
 ```
-### Move_base 
+## Move_base 
 The move_base package allows:
 ```
 Launch the move_base node
 Set the rosparam described in the .yaml file
 ```
-# RVIZ & Gazebo Environment 
 
-![gazebo](https://user-images.githubusercontent.com/95746070/182430919-4ea5bcf9-4bd6-48c2-b341-3d63dd5d704c.png)
-![rviz](https://user-images.githubusercontent.com/95746070/182430941-553625f0-ba23-4581-bd9e-5bc08d4e5763.png)
-### final_assignment 
+## final_assignment 
 The final_assignment packages holds the overall working of each mode by making different nodes that works together to compelet the goal given by user.
+Following are the nodes created in above package.
 
 #### UserInterface
-```
-The UserInterface node is capable of switching between the nodes by setting the ros parameter. 
-Ros parameter updates the value in “active” as chosen by the user to run the specific node.
-```
-![UI](https://user-images.githubusercontent.com/95746070/182434366-3184f0af-5f98-45b1-a485-8b181631d904.png)
 
+The UserInterface node is capable of switching between the nodes by setting the ros parameter. Ros parameter updates the value in “active” as chosen by the user to run the specific node.
+
+![UI](https://user-images.githubusercontent.com/95746070/182434366-3184f0af-5f98-45b1-a485-8b181631d904.png)
 
 #### mode 1
 
@@ -77,6 +73,10 @@ whenever their is the wall in left, right or front the given function 'pop_it()'
 
 ![mode3](https://user-images.githubusercontent.com/95746070/182434522-189a0ba4-e073-4c44-a42a-dc7e4660e0e9.png)
 
+## RVIZ & Gazebo Environment 
+
+![gazebo](https://user-images.githubusercontent.com/95746070/182430919-4ea5bcf9-4bd6-48c2-b341-3d63dd5d704c.png)
+![rviz](https://user-images.githubusercontent.com/95746070/182430941-553625f0-ba23-4581-bd9e-5bc08d4e5763.png)
 
 ## Flowchart & RQT_Graph
 
@@ -84,7 +84,7 @@ whenever their is the wall in left, right or front the given function 'pop_it()'
 
 ![rosgraph](https://user-images.githubusercontent.com/95746070/182451357-8acb1ae2-8bc6-49da-93c6-9018c0fce3c7.png)
 
-### Possible Future Improvements
+## Possible Future Improvements
 * A possible improvement can be the possibility of storing the map already seen and make it available in a future simulation to optimize the time to find a path for a goal.
 * We can manage the speed control.
 
